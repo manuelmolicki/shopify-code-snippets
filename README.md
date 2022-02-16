@@ -1,4 +1,4 @@
-# shopify-code-snippets
+# Shopify Code Snippets
 Collection of useful shopify code snippets
 
 ##  Show available variants on collection pages
