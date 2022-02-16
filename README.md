@@ -23,3 +23,14 @@ By adding some css you can also highlight the availability
   {% endunless %}
   </div>
 ```
+
+##  Show custom product label based on a tag
+Just add the tag e.g. `label-comingsoon` to your product
+````
+{% if product.tags contains 'label-comingsoon' %}
+  <div class="ribbon-wrapper">
+    <div class="ribbon comingsoon">
+      {{ 'products.product.comingsoon' | t }}
+    </div>
+  </div>
+{% endif %}
