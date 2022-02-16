@@ -2,7 +2,6 @@
 Collection of useful shopify code snippets
 
 ##  Show available variants on collection pages
-By adding some css you can also highlight the availability
 
 ```
 <div class="mo-availability">
@@ -22,6 +21,19 @@ By adding some css you can also highlight the availability
     {% endunless %}
   {% endunless %}
   </div>
+```
+
+By adding some SCSS you can also highlight the availability
+
+```
+.availability{
+  margin:.25rem 0;
+  .value{
+    &.soldout{
+      color: #adb5bd;
+    }
+  }
+}
 ```
 
 ##  Show custom product label based on a tag
