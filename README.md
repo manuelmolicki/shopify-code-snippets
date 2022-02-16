@@ -61,3 +61,26 @@ You need to add two metafields for earch product: modell e.g. `airmax90` + color
   {% endif %}
 {%- endif -%}
 ````
+
+Use a bit of SCSS to make the color swatches good looking
+
+```
+.color-swatches{
+  display: flex;
+  margin: .5rem 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5rem;
+  margin-right:.25rem;
+  border: 2px solid #f3f3f3;
+  margin-right: none;
+  .colorcode{
+    width: 16px;
+    height: 16px;
+    &.active{
+      cursor:inherit;
+      border: 2px solid #000;
+    }
+  }
+}
+```
