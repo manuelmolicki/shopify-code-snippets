@@ -34,3 +34,30 @@ Just add the tag e.g. `label-comingsoon` to your product
     </div>
   </div>
 {% endif %}
+````
+
+
+##  Group productd by modell + show color swatches for collection pages + detail page
+You need to add two metafields for earch product: modell e.g. `airmax90` + colorcode e.g. `#000000`
+
+````
+{%- if product.metafields.modell != blank -%}
+  {%- capture productModells -%}
+    {% assign modell = product.metafields.modell.value %}
+    {% for p in collections.all.products %}
+      {% assign pmodell = p.metafields.modell.value %}
+          {% if p.id != product.id %}
+          {% if modell == pmodell %}
+            <a class="colorcode" href="{{ p.url }}" style="background-color: {{ p.metafields.colorcode.value }}"></a>
+          {% endif %}
+          {% endif %}
+    {% endfor %}
+  {%- endcapture -%}
+  {%- if productModells != blank -%}
+  <div class="color-swatches">
+    <a href="#" class="colorcode active" style="background-color: {{ product.metafields.colorcode.value }};"></a>
+    {{ productModells }}
+  </div>
+  {% endif %}
+{%- endif -%}
+````
