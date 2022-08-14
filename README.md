@@ -1,5 +1,5 @@
 # Shopify Code Snippets
-Collection of useful shopify code snippets
+Collection of useful shopify code snippets by 3MO (MM)
 
 ##  Show available variants on collection pages
 
